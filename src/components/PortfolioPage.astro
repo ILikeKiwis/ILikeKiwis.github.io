@@ -1,0 +1,157 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
+import Icon from "@/components/Icon.astro";
+import profile from "@/data/profile.json";
+import projects from "@/data/projects.json";
+import { ui, type Locale } from "@/lib/i18n";
+
+const { locale = "en" } = Astro.props as { locale?: Locale };
+const labels = ui[locale];
+const profileText = profile.locales[locale];
+const featuredProjects = projects.filter((project) => project.featured !== false);
+const pageTitle = `${profile.name} | Portfolio`;
+const aboutId = locale === "es" ? "sobre-mi" : "about";
+const projectsId = locale === "es" ? "proyectos" : "projects";
+const contactId = locale === "es" ? "contacto" : "contact";
+---
+
+<BaseLayout title={pageTitle} description={profileText.intro} lang={locale}>
+  <main class="mx-auto flex min-h-screen w-full max-w-6xl flex-col px-5 py-5 sm:px-6 lg:px-8">
+    <header class="sticky top-3 z-10 mb-10 rounded-lg border border-white/70 bg-white/85 px-4 py-3 shadow-sm backdrop-blur md:top-5">
+      <nav class="flex items-center justify-between gap-4">
+        <a href={locale === "es" ? "/es/" : "/"} class="min-w-0 text-sm font-bold text-slate-950">
+          <span class="block truncate">{profile.name}</span>
+        </a>
+        <div class="hidden items-center gap-6 text-sm font-medium text-slate-600 sm:flex">
+          <a class="hover:text-slate-950" href={`#${aboutId}`}>{labels.navAbout}</a>
+          <a class="hover:text-slate-950" href={`#${projectsId}`}>{labels.navProjects}</a>
+          <a class="hover:text-slate-950" href={`#${contactId}`}>{labels.navContact}</a>
+        </div>
+        <div class="flex items-center gap-2">
+          <a class="inline-flex h-10 items-center rounded-md border border-[var(--border)] bg-white px-3 text-sm font-bold text-slate-700 transition hover:border-[var(--accent)] hover:text-[var(--accent)]" href={labels.otherLocaleHref} aria-label="Change language">
+            {labels.otherLocaleLabel}
+          </a>
+          <a class="inline-flex items-center gap-2 rounded-md bg-slate-950 px-3 py-2 text-sm font-semibold text-white transition hover:bg-[var(--accent-strong)]" href={profile.githubUrl} target="_blank" rel="noreferrer">
+            <Icon name="github" />
+            {labels.githubButton}
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="grid flex-1 items-center gap-10 pb-14 pt-8 md:grid-cols-[1.1fr_0.9fr] md:pb-20 md:pt-14">
+      <div class="fade-in">
+        <p class="inline-flex rounded-md border border-[var(--border)] bg-white px-3 py-1 text-sm font-semibold text-[var(--success)]">
+          {profileText.availability}
+        </p>
+        <h1 class="mt-5 max-w-3xl text-balance text-5xl font-extrabold leading-[1.02] tracking-normal text-slate-950 sm:text-6xl">
+          {profile.name}
+        </h1>
+        <p class="mt-4 text-xl font-semibold text-slate-700">{profileText.role}</p>
+        <p class="mt-5 max-w-2xl text-lg leading-8 text-[var(--muted)]">{profileText.intro}</p>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a class="inline-flex items-center gap-2 rounded-md bg-[var(--accent)] px-4 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-[var(--accent-strong)]" href={profile.githubUrl} target="_blank" rel="noreferrer">
+            <Icon name="github" />
+            {labels.viewGithub}
+          </a>
+          <a class="inline-flex items-center gap-2 rounded-md border border-[var(--border)] bg-white px-4 py-3 text-sm font-bold text-slate-800 transition hover:border-slate-400" href={profile.linkedinUrl} target="_blank" rel="noreferrer">
+            <Icon name="linkedin" />
+            LinkedIn
+          </a>
+          <a class="inline-flex items-center gap-2 rounded-md border border-[var(--border)] bg-white px-4 py-3 text-sm font-bold text-slate-800 transition hover:border-slate-400" href={profile.cvUrl}>
+            <Icon name="file" />
+            CV
+          </a>
+        </div>
+      </div>
+
+      <aside class="fade-in rounded-lg border border-[var(--border)] bg-[var(--panel)] p-5 shadow-subtle md:p-6" style="animation-delay: 120ms">
+        <div class="flex items-center gap-4">
+          <div class="grid h-16 w-16 place-items-center rounded-lg bg-slate-950 text-2xl font-extrabold text-white">
+            {profile.name.slice(0, 2).toUpperCase()}
+          </div>
+          <div class="min-w-0">
+            <p class="truncate text-lg font-bold text-slate-950">{profile.githubUsername}</p>
+            <p class="text-sm text-[var(--muted)]">{profileText.location}</p>
+          </div>
+        </div>
+        <div class="mt-6 rounded-md border border-slate-200 bg-slate-50 p-4">
+          <p class="text-sm font-semibold text-slate-950">{labels.quickLink}</p>
+          <p id="githubHandle" class="mt-2 break-all text-sm text-[var(--muted)]">{profile.githubUrl}</p>
+          <button id="copyGithub" class="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-md border border-slate-300 bg-white px-3 py-2.5 text-sm font-bold text-slate-800 transition hover:border-[var(--accent)] hover:text-[var(--accent)]" type="button" data-copy={profile.githubUrl}>
+            <Icon name="copy" />
+            {labels.copyGithub}
+          </button>
+          <p id="copyStatus" class="mt-2 min-h-5 text-sm font-medium text-[var(--success)]" aria-live="polite"></p>
+        </div>
+      </aside>
+    </section>
+
+    <section id={aboutId} class="border-t border-[var(--border)] py-14">
+      <div class="grid gap-6 md:grid-cols-[0.42fr_1fr]">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-wide text-[var(--accent)]">{labels.aboutEyebrow}</p>
+          <h2 class="mt-2 text-3xl font-bold text-slate-950">{labels.aboutTitle}</h2>
+        </div>
+        <p class="max-w-3xl text-lg leading-8 text-[var(--muted)]">{profileText.about}</p>
+      </div>
+    </section>
+
+    <section id={projectsId} class="border-t border-[var(--border)] py-14">
+      <div class="mb-8 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-wide text-[var(--accent)]">{labels.projectsEyebrow}</p>
+          <h2 class="mt-2 text-3xl font-bold text-slate-950">{labels.projectsTitle}</h2>
+        </div>
+        <a class="inline-flex items-center gap-2 text-sm font-bold text-[var(--accent)] hover:text-[var(--accent-strong)]" href={profile.githubUrl} target="_blank" rel="noreferrer">
+          {labels.viewAll}
+          <Icon name="arrow" />
+        </a>
+      </div>
+      <div class="grid gap-5 md:grid-cols-2">
+        {featuredProjects.map((project) => <ProjectCard project={project} locale={locale} />)}
+      </div>
+    </section>
+
+    <section id={contactId} class="border-t border-[var(--border)] py-14">
+      <div class="rounded-lg border border-[var(--border)] bg-slate-950 p-6 text-white shadow-subtle md:p-8">
+        <div class="flex flex-col justify-between gap-6 md:flex-row md:items-center">
+          <div>
+            <p class="text-sm font-bold uppercase tracking-wide text-sky-300">{labels.contactEyebrow}</p>
+            <h2 class="mt-2 text-3xl font-bold">{labels.contactTitle}</h2>
+            <p class="mt-3 max-w-2xl leading-7 text-slate-300">{labels.contactText}</p>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <a class="inline-flex items-center gap-2 rounded-md bg-white px-4 py-3 text-sm font-bold text-slate-950 transition hover:bg-slate-100" href={profile.linkedinUrl} target="_blank" rel="noreferrer">
+              <Icon name="linkedin" />
+              LinkedIn
+            </a>
+            <a class="inline-flex items-center gap-2 rounded-md border border-white/20 px-4 py-3 text-sm font-bold text-white transition hover:border-white/50" href={profile.cvUrl}>
+              <Icon name="file" />
+              CV
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script is:inline define:vars={{ copySuccess: labels.copySuccess, copyError: labels.copyError }}>
+    const button = document.querySelector("#copyGithub");
+    const status = document.querySelector("#copyStatus");
+
+    button?.addEventListener("click", async () => {
+      const value = button instanceof HTMLElement ? button.dataset.copy : "";
+      if (!value) return;
+
+      try {
+        await navigator.clipboard.writeText(value);
+        if (status) status.textContent = copySuccess;
+      } catch {
+        if (status) status.textContent = copyError;
+      }
+    });
+  </script>
+</BaseLayout>

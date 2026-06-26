@@ -2,11 +2,14 @@
 
 Landing page personal para usar como enlace en CV y LinkedIn. Esta web esta creada con Astro + Tailwind y usa archivos JSON para que sea facil editar el perfil y los proyectos destacados.
 
+La version por defecto esta en ingles en `/`. La version en espanol esta en `/es/`.
+
 ## Editar contenido
 
 - Perfil, enlaces y texto principal: `src/data/profile.json`
 - Proyectos destacados: `src/data/projects.json`
 - Si quieres incluir tu CV, coloca el archivo como `public/cv.pdf` o cambia `cvUrl` en el perfil.
+- Para editar idiomas, cambia los bloques `en` y `es` de esos JSON.
 
 ## Ejecutar en local
 

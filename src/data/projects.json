@@ -3,8 +3,14 @@
     "name": "SID-P1",
     "repo": "ILikeKiwis/SID-P1",
     "url": "https://github.com/ILikeKiwis/SID-P1",
-    "description": "Pràctica 1 SID, Q2 25-26",
-    "readmeExcerpt": "Implementación de tres agentes ASL para un juego de atrapar la bandera.",
+    "description": {
+      "en": "First SID practice project, Q2 25-26.",
+      "es": "Practica 1 SID, Q2 25-26."
+    },
+    "readmeExcerpt": {
+      "en": "Implementation of three ASL agents for a capture-the-flag game.",
+      "es": "Implementacion de tres agentes ASL para un juego de atrapar la bandera."
+    },
     "language": "ASP.NET",
     "technologies": ["ASL", "Shell"],
     "updatedAt": "2026-06-26",
@@ -15,8 +21,14 @@
     "name": "SID-Practica2",
     "repo": "ILikeKiwis/SID-Practica2",
     "url": "https://github.com/ILikeKiwis/SID-Practica2",
-    "description": "Practica 2 SID. Q2 25-26",
-    "readmeExcerpt": "Entrenamiento de un agente en FrozenLake usando diversos algoritmos de aprendizaje, como Q-Learning, entre otros.",
+    "description": {
+      "en": "Second SID practice project, Q2 25-26.",
+      "es": "Practica 2 SID, Q2 25-26."
+    },
+    "readmeExcerpt": {
+      "en": "Training an agent in FrozenLake using different learning algorithms, including Q-Learning.",
+      "es": "Entrenamiento de un agente en FrozenLake usando diversos algoritmos de aprendizaje, como Q-Learning, entre otros."
+    },
     "language": "Python",
     "technologies": ["Python"],
     "updatedAt": "2026-06-26",
@@ -24,23 +36,35 @@
     "featured": true
   },
   {
-  "name": "SID-P3",
-  "repo": "ILikeKiwis/SID-P3",
-  "url": "https://github.com/ILikeKiwis/SID-P3",
-  "description": "P3 SID FIB Q2 25-26",
-  "readmeExcerpt": "Experimentos sobre el aprendizaje por refuerzo en un entorno variable, variando los hiperparámetros de los diferentes algoritmos.",
-  "language": "Python",
-  "technologies": ["Jupyter Notebook", "Python"],
-  "updatedAt": "2026-06-26",
-  "stars": 0,
-  "featured": true
+    "name": "SID-P3",
+    "repo": "ILikeKiwis/SID-P3",
+    "url": "https://github.com/ILikeKiwis/SID-P3",
+    "description": {
+      "en": "Third SID practice project, FIB Q2 25-26.",
+      "es": "P3 SID FIB Q2 25-26."
+    },
+    "readmeExcerpt": {
+      "en": "Reinforcement learning experiments in a variable environment, changing hyperparameters across different algorithms.",
+      "es": "Experimentos sobre el aprendizaje por refuerzo en un entorno variable, variando los hiperparametros de los diferentes algoritmos."
+    },
+    "language": "Python",
+    "technologies": ["Jupyter Notebook", "Python"],
+    "updatedAt": "2026-06-26",
+    "stars": 0,
+    "featured": true
   },
   {
     "name": "FIB",
     "repo": "ILikeKiwis/FIB",
     "url": "https://github.com/ILikeKiwis/FIB",
-    "description": "",
-    "readmeExcerpt": "Diversas asignaturas cursadas a lo largo de la carrera.",
+    "description": {
+      "en": "Coursework and exercises from different subjects during my degree.",
+      "es": "Diversas asignaturas cursadas a lo largo de la carrera."
+    },
+    "readmeExcerpt": {
+      "en": "Collection of university assignments and projects developed throughout the Computer Engineering degree.",
+      "es": "Diversas asignaturas cursadas a lo largo de la carrera."
+    },
     "language": "Makefile",
     "technologies": ["ANTLR", "Assembly", "C", "C++", "GLSL", "Haskell", "Makefile", "Objective-J", "Prolog", "Python", "QMake", "Shell"],
     "updatedAt": "2026-06-26",
@@ -51,8 +75,14 @@
     "name": "VJ-2D",
     "repo": "ILikeKiwis/VJ-2D",
     "url": "https://github.com/ILikeKiwis/VJ-2D",
-    "description": "Asignatura VJ Q2 25-26",
-    "readmeExcerpt": "Juego 2D, desarrollado en C, tomando como inspiración el juego Bugs Bunny Crazy Castle 3.",
+    "description": {
+      "en": "2D game development coursework, Q2 25-26.",
+      "es": "Asignatura VJ Q2 25-26."
+    },
+    "readmeExcerpt": {
+      "en": "2D game developed in C, inspired by Bugs Bunny Crazy Castle 3.",
+      "es": "Juego 2D, desarrollado en C, tomando como inspiracion el juego Bugs Bunny Crazy Castle 3."
+    },
     "language": "C",
     "technologies": ["C", "C++", "CMake", "CSS", "GLSL", "HTML", "JavaScript", "Objective-C", "Shell"],
     "updatedAt": "2026-06-26",
@@ -63,8 +93,14 @@
     "name": "VJ-3D",
     "repo": "ILikeKiwis/VJ-3D",
     "url": "https://github.com/ILikeKiwis/VJ-3D",
-    "description": "",
-    "readmeExcerpt": "Juego 3D, desarrollado en Unity, tomando como inspiración para la jugabilidad el juego Looty Dungeons y para el estilo visual Minecraft. Para los modelos 3D se ha usado Blender y para las texturas LibreSprite.",
+    "description": {
+      "en": "3D game project built with Unity.",
+      "es": "Proyecto de videojuego 3D desarrollado con Unity."
+    },
+    "readmeExcerpt": {
+      "en": "3D game developed in Unity, with gameplay inspired by Looty Dungeons and a visual style inspired by Minecraft. Blender was used for 3D models and LibreSprite for textures.",
+      "es": "Juego 3D, desarrollado en Unity, tomando como inspiracion para la jugabilidad el juego Looty Dungeons y para el estilo visual Minecraft. Para los modelos 3D se ha usado Blender y para las texturas LibreSprite."
+    },
     "language": "C#",
     "technologies": ["C#", "HLSL", "ShaderLab"],
     "updatedAt": "2026-06-26",
@@ -75,8 +111,14 @@
     "name": "VC-ProjFinal",
     "repo": "ILikeKiwis/VC-ProjFinal",
     "url": "https://github.com/ILikeKiwis/VC-ProjFinal",
-    "description": "Proyecto VC. Q2 25-26",
-    "readmeExcerpt": "Proyecto final de la asignatura VC, desarrollado en MATLAB, consiste en un detector de matrículas de vehículos en imágenes.",
+    "description": {
+      "en": "Final VC course project, Q2 25-26.",
+      "es": "Proyecto VC, Q2 25-26."
+    },
+    "readmeExcerpt": {
+      "en": "Final VC course project developed in MATLAB: a vehicle license plate detector for images.",
+      "es": "Proyecto final de la asignatura VC, desarrollado en MATLAB. Consiste en un detector de matriculas de vehiculos en imagenes."
+    },
     "language": "MATLAB",
     "technologies": ["MATLAB"],
     "updatedAt": "2026-06-26",

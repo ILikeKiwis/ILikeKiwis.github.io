@@ -1,13 +1,24 @@
 {
   "name": "Kristian Stoykov",
-  "role": "Estudiante de Ingeniería Informática",
-  "location": "España",
-  "intro": "Portfolio personal, donde muestro mis proyectos y experiencia en desarrollo de software.",
-  "about": "Me apasiona solucionar problemas y aprender nuevas tecnologías. Actualmente estoy acabando Ingeniería Informática y los campos que más me interesan son el desarrollo de videojuegos, la inteligencia artificial y la algoritmia.",
   "githubUsername": "ILikeKiwis",
   "githubUrl": "https://github.com/ILikeKiwis",
   "linkedinUrl": "https://www.linkedin.com/in/kristian-stoykov-ivanov",
   "cvUrl": "/cv.pdf",
   "email": "krisi.stoykov@gmail.com",
-  "availability": "Disponible para proyectos y oportunidades"
+  "locales": {
+    "en": {
+      "role": "Computer Engineering student",
+      "location": "Spain",
+      "intro": "Personal portfolio where I showcase my projects and software development experience.",
+      "about": "I enjoy solving problems and learning new technologies. I am currently finishing my Computer Engineering degree, and the areas that interest me most are game development, artificial intelligence, and algorithms.",
+      "availability": "Open to projects and opportunities"
+    },
+    "es": {
+      "role": "Estudiante de Ingenieria Informatica",
+      "location": "Espana",
+      "intro": "Portfolio personal, donde muestro mis proyectos y experiencia en desarrollo de software.",
+      "about": "Me apasiona solucionar problemas y aprender nuevas tecnologias. Actualmente estoy acabando Ingenieria Informatica y los campos que mas me interesan son el desarrollo de videojuegos, la inteligencia artificial y la algoritmia.",
+      "availability": "Disponible para proyectos y oportunidades"
+    }
+  }
 }

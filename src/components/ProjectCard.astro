@@ -1,22 +1,26 @@
 ---
 import Icon from "./Icon.astro";
+import { localized, ui, type Locale } from "@/lib/i18n";
 
 type Project = {
   name: string;
   repo: string;
   url: string;
-  description: string;
-  readmeExcerpt?: string;
+  description: string | Record<Locale, string>;
+  readmeExcerpt?: string | Record<Locale, string>;
   language?: string;
   technologies?: string[];
   updatedAt?: string;
   stars?: number;
 };
 
-const { project } = Astro.props as { project: Project };
+const { project, locale = "en" } = Astro.props as { project: Project; locale?: Locale };
+const labels = ui[locale];
+const description = localized(project.description, locale);
+const readmeExcerpt = localized(project.readmeExcerpt, locale);
 
 const formattedDate = project.updatedAt
-  ? new Intl.DateTimeFormat("es", { month: "short", year: "numeric" }).format(new Date(project.updatedAt))
+  ? new Intl.DateTimeFormat(labels.locale, { month: "short", year: "numeric" }).format(new Date(project.updatedAt))
   : "";
 ---
 
@@ -31,16 +35,16 @@ const formattedDate = project.updatedAt
         </a>
       </h3>
     </div>
-    <a class="grid h-10 w-10 shrink-0 place-items-center rounded-md border border-[var(--border)] text-[var(--muted)] transition hover:border-[var(--accent)] hover:text-[var(--accent)]" href={project.url} target="_blank" rel="noreferrer" aria-label={`Abrir ${project.name} en GitHub`}>
+    <a class="grid h-10 w-10 shrink-0 place-items-center rounded-md border border-[var(--border)] text-[var(--muted)] transition hover:border-[var(--accent)] hover:text-[var(--accent)]" href={project.url} target="_blank" rel="noreferrer" aria-label={`${labels.openRepo} ${project.name} ${labels.onGithub}`}>
       <Icon name="github" class="h-5 w-5" />
     </a>
   </div>
 
-  <p class="mt-4 text-sm leading-6 text-[var(--muted)]">{project.description}</p>
+  <p class="mt-4 text-sm leading-6 text-[var(--muted)]">{description}</p>
 
-  {project.readmeExcerpt && (
+  {readmeExcerpt && (
     <p class="mt-3 rounded-md border border-slate-200 bg-slate-50 px-3 py-2 text-sm leading-6 text-slate-600">
-      {project.readmeExcerpt}
+      {readmeExcerpt}
     </p>
   )}
 
@@ -55,13 +59,13 @@ const formattedDate = project.updatedAt
     {formattedDate && (
       <span class="inline-flex items-center gap-1.5">
         <Icon name="clock" class="h-3.5 w-3.5" />
-        Actualizado {formattedDate}
+        {labels.updated} {formattedDate}
       </span>
     )}
     {typeof project.stars === "number" && (
       <span class="inline-flex items-center gap-1.5">
         <Icon name="star" class="h-3.5 w-3.5 text-amber-500" />
-        {project.stars} estrellas
+        {project.stars} {labels.stars}
       </span>
     )}
   </div>

@@ -22,9 +22,9 @@ async function copyDir(source, target) {
   }
 }
 
-await copyFile(join(dist, "index.html"), join(root, "index.html"));
 await rm(join(root, "_astro"), { recursive: true, force: true });
-await copyDir(join(dist, "_astro"), join(root, "_astro"));
+await rm(join(root, "es"), { recursive: true, force: true });
+await copyDir(dist, root);
 await writeFile(join(root, ".nojekyll"), "");
 
 console.log("GitHub Pages static files exported to repository root.");

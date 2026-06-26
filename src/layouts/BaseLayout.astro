@@ -3,12 +3,13 @@ import "../styles/global.css";
 
 const {
   title = "Portfolio personal",
-  description = "Landing page personal con proyectos destacados, enlaces profesionales y repositorios."
+  description = "Landing page personal con proyectos destacados, enlaces profesionales y repositorios.",
+  lang = "en"
 } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
