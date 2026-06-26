@@ -1,0 +1,86 @@
+[
+  {
+    "name": "SID-P1",
+    "repo": "ILikeKiwis/SID-P1",
+    "url": "https://github.com/ILikeKiwis/SID-P1",
+    "description": "Pràctica 1 SID, Q2 25-26",
+    "readmeExcerpt": "Implementación de tres agentes ASL para un juego de atrapar la bandera.",
+    "language": "ASP.NET",
+    "technologies": ["ASL", "ASP.NET", "Shell"],
+    "updatedAt": "2026-06-26",
+    "stars": 0,
+    "featured": true
+  },
+  {
+    "name": "SID-Practica2",
+    "repo": "ILikeKiwis/SID-Practica2",
+    "url": "https://github.com/ILikeKiwis/SID-Practica2",
+    "description": "Practica 2 SID. Q2 25-26",
+    "readmeExcerpt": "Entrenamiento de un agente en FrozenLake usando diversos algoritmos de aprendizaje, como Q-Learning, entre otros.",
+    "language": "Python",
+    "technologies": ["Python"],
+    "updatedAt": "2026-06-26",
+    "stars": 0,
+    "featured": true
+  },
+  {
+  "name": "SID-P3",
+  "repo": "ILikeKiwis/SID-P3",
+  "url": "https://github.com/ILikeKiwis/SID-P3",
+  "description": "P3 SID FIB Q2 25-26",
+  "readmeExcerpt": "Experimentos sobre el aprendizaje por refuerzo en un entorno variable, variando los hiperparámetros de los diferentes algoritmos.",
+  "language": "Python",
+  "technologies": ["Jupyter Notebook", "Python"],
+  "updatedAt": "2026-06-26",
+  "stars": 0,
+  "featured": true
+  },
+  {
+    "name": "FIB",
+    "repo": "ILikeKiwis/FIB",
+    "url": "https://github.com/ILikeKiwis/FIB",
+    "description": "",
+    "readmeExcerpt": "Diversas asignaturas cursadas a lo largo de la carrera.",
+    "language": "Makefile",
+    "technologies": ["ANTLR", "Assembly", "C", "C++", "GLSL", "Haskell", "Makefile", "Objective-J", "Prolog", "Python", "QMake", "Shell"],
+    "updatedAt": "2026-06-26",
+    "stars": 0,
+    "featured": true
+  },
+  {
+    "name": "VJ-2D",
+    "repo": "ILikeKiwis/VJ-2D",
+    "url": "https://github.com/ILikeKiwis/VJ-2D",
+    "description": "Assignatura VJ Q2 25-26",
+    "readmeExcerpt": "Juego 2D, desarollado en C, tomando como inspiración el juego Bugs Bunny Crazy Castle 3.",
+    "language": "C",
+    "technologies": ["C", "C++", "CMake", "CSS", "GLSL", "HTML", "JavaScript", "Objective-C", "Shell"],
+    "updatedAt": "2026-06-26",
+    "stars": 0,
+    "featured": true
+  },
+  {
+    "name": "VJ-3D",
+    "repo": "ILikeKiwis/VJ-3D",
+    "url": "https://github.com/ILikeKiwis/VJ-3D",
+    "description": "",
+    "readmeExcerpt": "Juego 3D, desarollado en Unity, tomando como inspiración para la jugabilidad el juego Looty Dungeons y para el estilo visual Minecraft. Para los modelos 3D se ha usado Blender y para las texturas libreSprite.",
+    "language": "C#",
+    "technologies": ["C#", "HLSL", "ShaderLab"],
+    "updatedAt": "2026-06-26",
+    "stars": 0,
+    "featured": true
+  },
+  {
+    "name": "VC-ProjFinal",
+    "repo": "ILikeKiwis/VC-ProjFinal",
+    "url": "https://github.com/ILikeKiwis/VC-ProjFinal",
+    "description": "Projecte VC. Q2 25-26",
+    "readmeExcerpt": "Proyecto final de la asignatura VC, desarrollado en MATLAB, consiste en un detector de matrículas de vehículos en imágenes.",
+    "language": "MATLAB",
+    "technologies": ["MATLAB"],
+    "updatedAt": "2026-06-26",
+    "stars": 0,
+    "featured": true
+  }
+]
