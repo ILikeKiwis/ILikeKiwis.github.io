@@ -5,14 +5,14 @@
     "url": "https://github.com/ILikeKiwis/SID-P1",
     "description": {
       "en": "First SID practice project, Q2 25-26.",
-      "es": "Practica 1 SID, Q2 25-26."
+      "es": "Práctica 1 SID, Q2 25-26."
     },
     "readmeExcerpt": {
       "en": "Implementation of three ASL agents for a capture-the-flag game.",
-      "es": "Implementacion de tres agentes ASL para un juego de atrapar la bandera."
+      "es": "Implementación de tres agentes ASL para un juego de atrapar la bandera."
     },
-    "language": "ASP.NET",
-    "technologies": ["ASL", "Shell"],
+    "language": "ASL",
+    "technologies": ["Shell"],
     "updatedAt": "2026-06-26",
     "stars": 0,
     "featured": true
@@ -23,14 +23,14 @@
     "url": "https://github.com/ILikeKiwis/SID-Practica2",
     "description": {
       "en": "Second SID practice project, Q2 25-26.",
-      "es": "Practica 2 SID, Q2 25-26."
+      "es": "Práctica 2 SID, Q2 25-26."
     },
     "readmeExcerpt": {
       "en": "Training an agent in FrozenLake using different learning algorithms, including Q-Learning.",
       "es": "Entrenamiento de un agente en FrozenLake usando diversos algoritmos de aprendizaje, como Q-Learning, entre otros."
     },
     "language": "Python",
-    "technologies": ["Python"],
+    "technologies": ["Q-Learning", "FrozenLake"],
     "updatedAt": "2026-06-26",
     "stars": 0,
     "featured": true
@@ -45,10 +45,65 @@
     },
     "readmeExcerpt": {
       "en": "Reinforcement learning experiments in a variable environment, changing hyperparameters across different algorithms.",
-      "es": "Experimentos sobre el aprendizaje por refuerzo en un entorno variable, variando los hiperparametros de los diferentes algoritmos."
+      "es": "Experimentos sobre el aprendizaje por refuerzo en un entorno variable, variando los hiperparámetros de los diferentes algoritmos."
     },
     "language": "Python",
-    "technologies": ["Jupyter Notebook", "Python"],
+    "technologies": ["Jupyter Notebook", "Reinforcement Learning"],
+    "updatedAt": "2026-06-26",
+    "stars": 0,
+    "featured": true
+  },
+  {
+    "name": "VJ-2D",
+    "repo": "ILikeKiwis/VJ-2D",
+    "url": "https://github.com/ILikeKiwis/VJ-2D",
+    "description": {
+      "en": "2D game development coursework, Q2 25-26.",
+      "es": "Asignatura VJ Q2 25-26."
+    },
+    "readmeExcerpt": {
+      "en": "2D game developed in C, inspired by Bugs Bunny Crazy Castle 3.",
+      "es": "Juego 2D, desarrollado en C, tomando como inspiración el juego Bugs Bunny Crazy Castle 3."
+    },
+    "language": "C",
+    "technologies": ["CMake", "GLSL", "OpenGL"],
+    "updatedAt": "2026-06-26",
+    "stars": 0,
+    "featured": true
+  },
+  {
+    "name": "VJ-3D",
+    "repo": "ILikeKiwis/VJ-3D",
+    "url": "https://github.com/ILikeKiwis/VJ-3D",
+    "description": {
+      "en": "3D game project built with Unity.",
+      "es": "Proyecto de videojuego 3D desarrollado con Unity."
+    },
+    "readmeExcerpt": {
+      "en": "3D game developed in Unity, with gameplay inspired by Looty Dungeons and a visual style inspired by Minecraft. Blender was used for 3D models and LibreSprite for textures.",
+      "es": "Juego 3D, desarrollado en Unity, tomando como inspiración para la jugabilidad el juego Looty Dungeons y para el estilo visual Minecraft. Para los modelos 3D se ha usado Blender y para las texturas LibreSprite."
+    },
+    "language": "C#",
+    "technologies": ["Unity", "HLSL", "ShaderLab", "Blender", "LibreSprite"],
+    "demoUrl": "/games/3D/index.html",
+    "updatedAt": "2026-06-26",
+    "stars": 0,
+    "featured": true
+  },
+  {
+    "name": "VC-ProjFinal",
+    "repo": "ILikeKiwis/VC-ProjFinal",
+    "url": "https://github.com/ILikeKiwis/VC-ProjFinal",
+    "description": {
+      "en": "Final VC course project, Q2 25-26.",
+      "es": "Proyecto VC, Q2 25-26."
+    },
+    "readmeExcerpt": {
+      "en": "Vehicle license plate detection system in images, developed with MATLAB, implementing a ROI detector and an OCR to recognize the characters of the license plate.",
+      "es": "Sistema de detección de matrículas de vehículos en imágenes, desarrollado con MATLAB, implementando un detector de ROIs y un OCR para reconocer los caracteres de la matrícula."
+    },
+    "language": "MATLAB",
+    "technologies": ["Computer Vision", "OCR"],
     "updatedAt": "2026-06-26",
     "stars": 0,
     "featured": true
@@ -65,62 +120,11 @@
       "en": "Collection of university assignments and projects developed throughout the Computer Engineering degree.",
       "es": "Diversas asignaturas cursadas a lo largo de la carrera."
     },
-    "language": "Makefile",
-    "technologies": ["ANTLR", "Assembly", "C", "C++", "GLSL", "Haskell", "Makefile", "Objective-J", "Prolog", "Python", "QMake", "Shell"],
-    "updatedAt": "2026-06-26",
-    "stars": 0,
-    "featured": true
-  },
-  {
-    "name": "VJ-2D",
-    "repo": "ILikeKiwis/VJ-2D",
-    "url": "https://github.com/ILikeKiwis/VJ-2D",
-    "description": {
-      "en": "2D game development coursework, Q2 25-26.",
-      "es": "Asignatura VJ Q2 25-26."
+    "language": {
+      "en": "Multiple",
+      "es": "Varios"
     },
-    "readmeExcerpt": {
-      "en": "2D game developed in C, inspired by Bugs Bunny Crazy Castle 3.",
-      "es": "Juego 2D, desarrollado en C, tomando como inspiracion el juego Bugs Bunny Crazy Castle 3."
-    },
-    "language": "C",
-    "technologies": ["C", "C++", "CMake", "CSS", "GLSL", "HTML", "JavaScript", "Objective-C", "Shell"],
-    "updatedAt": "2026-06-26",
-    "stars": 0,
-    "featured": true
-  },
-  {
-    "name": "VJ-3D",
-    "repo": "ILikeKiwis/VJ-3D",
-    "url": "https://github.com/ILikeKiwis/VJ-3D",
-    "description": {
-      "en": "3D game project built with Unity.",
-      "es": "Proyecto de videojuego 3D desarrollado con Unity."
-    },
-    "readmeExcerpt": {
-      "en": "3D game developed in Unity, with gameplay inspired by Looty Dungeons and a visual style inspired by Minecraft. Blender was used for 3D models and LibreSprite for textures.",
-      "es": "Juego 3D, desarrollado en Unity, tomando como inspiracion para la jugabilidad el juego Looty Dungeons y para el estilo visual Minecraft. Para los modelos 3D se ha usado Blender y para las texturas LibreSprite."
-    },
-    "language": "C#",
-    "technologies": ["C#", "HLSL", "ShaderLab"],
-    "updatedAt": "2026-06-26",
-    "stars": 0,
-    "featured": true
-  },
-  {
-    "name": "VC-ProjFinal",
-    "repo": "ILikeKiwis/VC-ProjFinal",
-    "url": "https://github.com/ILikeKiwis/VC-ProjFinal",
-    "description": {
-      "en": "Final VC course project, Q2 25-26.",
-      "es": "Proyecto VC, Q2 25-26."
-    },
-    "readmeExcerpt": {
-      "en": "Final VC course project developed in MATLAB: a vehicle license plate detector for images.",
-      "es": "Proyecto final de la asignatura VC, desarrollado en MATLAB. Consiste en un detector de matriculas de vehiculos en imagenes."
-    },
-    "language": "MATLAB",
-    "technologies": ["MATLAB"],
+    "technologies": ["C", "C++", "Python", "Assembly", "Haskell", "Prolog", "ANTLR", "GLSL"],
     "updatedAt": "2026-06-26",
     "stars": 0,
     "featured": true

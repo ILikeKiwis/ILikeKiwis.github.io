@@ -8,8 +8,9 @@ type Project = {
   url: string;
   description: string | Record<Locale, string>;
   readmeExcerpt?: string | Record<Locale, string>;
-  language?: string;
+  language?: string | Record<Locale, string>;
   technologies?: string[];
+  demoUrl?: string;
   updatedAt?: string;
   stars?: number;
 };
@@ -18,6 +19,10 @@ const { project, locale = "en" } = Astro.props as { project: Project; locale?: L
 const labels = ui[locale];
 const description = localized(project.description, locale);
 const readmeExcerpt = localized(project.readmeExcerpt, locale);
+const language = localized(project.language, locale);
+const displayTechnologies = [...new Set(project.technologies ?? [])].filter(
+  (tech) => tech.toLowerCase() !== language?.toLowerCase()
+);
 
 const formattedDate = project.updatedAt
   ? new Intl.DateTimeFormat(labels.locale, { month: "short", year: "numeric" }).format(new Date(project.updatedAt))
@@ -49,11 +54,20 @@ const formattedDate = project.updatedAt
   )}
 
   <div class="mt-5 flex flex-wrap gap-2">
-    {project.language && <span class="rounded-md bg-slate-900 px-2.5 py-1 text-xs font-medium text-white">{project.language}</span>}
-    {project.technologies?.map((tech) => (
+    {language && <span class="rounded-md bg-slate-900 px-2.5 py-1 text-xs font-medium text-white">{language}</span>}
+    {displayTechnologies.map((tech) => (
       <span class="rounded-md border border-slate-200 bg-white px-2.5 py-1 text-xs font-medium text-slate-600">{tech}</span>
     ))}
   </div>
+
+  {project.demoUrl && (
+    <div class="mt-5 flex flex-wrap gap-2">
+      <a class="inline-flex items-center gap-2 rounded-md bg-[var(--accent)] px-3 py-2 text-sm font-bold text-white transition hover:bg-[var(--accent-strong)]" href={project.demoUrl}>
+        <Icon name="play" class="h-4 w-4" />
+        {labels.playDemo}
+      </a>
+    </div>
+  )}
 
   <div class="mt-auto flex flex-wrap items-center gap-x-4 gap-y-2 pt-6 text-xs font-medium text-[var(--muted)]">
     {formattedDate && (

@@ -24,6 +24,7 @@ async function copyDir(source, target) {
 
 await rm(join(root, "_astro"), { recursive: true, force: true });
 await rm(join(root, "es"), { recursive: true, force: true });
+await rm(join(root, "games"), { recursive: true, force: true });
 await copyDir(dist, root);
 await writeFile(join(root, ".nojekyll"), "");
 
